@@ -22,11 +22,11 @@ int main()
     pdb.addPerson(member2);
     pdb.addPerson(librarian1);
 
-    std::cout << "\n=== TEST: LISTING ALL PEOPLE ===" << std::endl;;
+    std::cout << "\n TEST 1: LISTING ALL PEOPLE" << std::endl;;
     pdb.listAll();
 
     // test 2 searching
-    std::cout << "\n=== TEST: SEARCH BY ID (M001) ===" << std::endl;
+    std::cout << "\nTEST 2: SEARCH BY ID (M001)" << std::endl;
     person *found_test = pdb.findByID("M001");
 
     if (found_test)
@@ -41,7 +41,7 @@ int main()
     }
 
     // Test 3 member borrowed count
-    std::cout << "\n=== TEST: Member Borrow Count ===" << std::endl;
+    std::cout << "\nTEST 3: Member Borrow Count" << std::endl;
     member *member_test = dynamic_cast<member *>(found_test); //used dynamic_cast than static_cast for going downcasting
     if (member_test)
     {
@@ -52,7 +52,7 @@ int main()
     }
 
     // Test 4 polymorphism table. annoying af
-    std::cout << "\n=== TEST: Polymorphism ===\n";
+    std::cout << "\nTEST 4: Polymorphism\n";
 
     for (size_t i = 0; i < pdb.size(); i++) 
     {
